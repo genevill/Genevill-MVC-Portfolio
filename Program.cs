@@ -1,4 +1,11 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Genevill_MVC_Portfolio.Data;
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<Genevill_MVC_PortfolioContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Genevill_MVC_PortfolioContext"), ServiceProviderOptions =>
+    ServiceProviderOptions.EnableRetryOnFailure()));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

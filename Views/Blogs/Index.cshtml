@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Genevill_MVC_Portfolio.Models.Blog>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container-fluid mt-5">
+    <p>
+        <a class="link-light" asp-action="Create">Create New</a>
+    </p>
+    <table class="table text-light">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Author)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Body)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Author)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Body)
+                </td>
+                <td>
+                    <a class="link-light" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a class="link-light" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a class="link-light" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+</div>
