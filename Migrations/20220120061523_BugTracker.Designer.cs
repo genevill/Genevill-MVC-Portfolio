@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Genevill_MVC_Portfolio.Migrations
 {
     [DbContext(typeof(Genevill_MVC_PortfolioContext))]
-    [Migration("20220120061523_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20220120061523_BugTracker")]
+    partial class BugTracker
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

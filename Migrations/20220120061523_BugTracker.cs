@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Genevill_MVC_Portfolio.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class BugTracker : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
